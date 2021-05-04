@@ -26,4 +26,11 @@ public class CustomConfig   {
     public static FileConfiguration get(){
         return customFile;
     }
+    public static void save(){
+        try{
+            customFile.save(file);
+        }catch(IOException e){
+            
+        }
+    }
 }
