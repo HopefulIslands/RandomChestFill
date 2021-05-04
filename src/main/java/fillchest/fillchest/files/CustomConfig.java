@@ -16,11 +16,14 @@ public class CustomConfig   {
 
         if(!file.exists()){
             try{
-                file.createNewFile()
+                file.createNewFile();
             }catch(IOException e){
 
             }
         }
         customFile = YamlConfiguration.loadConfiguration(file);
+    }
+    public static FileConfiguration get(){
+        return customFile;
     }
 }
