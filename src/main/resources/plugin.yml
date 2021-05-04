@@ -1,0 +1,4 @@
+name: FillChest
+version: ${project.version}
+main: fillchest.fillchest.FillChest
+api-version: 1.16
