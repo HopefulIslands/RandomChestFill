@@ -2,16 +2,15 @@ package fillchest.fillchest;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import fillchest.fillchest.files.CustomConfig;
+
 public final class FillChest extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
 
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        CustomConfig.setup();
+        CustomConfig.get().options().copyDefaults(true);
+        CustomConfig.save();
     }
 }
